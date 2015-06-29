@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IMDb</title>
+  <link rel="stylesheet" href="main.css">
+<script type="text/template" id="singleMovieTmpl">
+    <img src='<%= cover %>'/>
+    <div class='regularMovie'>
+      <h1><%= title %></h1>
+      <p>(<%= release %>)</p>
+      <p>User rating: <%= rating %> / 10</p>
+      <p><%= plot %></p>
+      <button class="edit">Edit Movie</button>
+      <button class="delete">Delete Movie</button>
+    </div>
+    <div class='editMovie hide'>
+      <input type="text" name="editTitle" value="<%= title %>">
+      <input type="text" name="editRelease" value="<%= release %>">
+      <input type="text" name="editCover" value="<%= cover %>">
+      <select name="editRating">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      <textarea name="editPlot" rows="8" cols="40"><%= plot %></textarea>
+      <button class="submitEdit">Submit Edit</button>
+    </div>
+  </script>
+</head>
+<body>
+  <div class='container'>
+    <div class='navBar'>
+      <img src="http://www.mariannehettinger.com/images/300px-IMDb_logo.svg.png"/>
+      <div class="entryForm">
+        <h2>Movie Not Found?  Add it!</h2>
+        <input type="text" name="title" value="" placeholder="Movie Title">
+        <input type="text" name="release" value="" placeholder="Year of Release">
+        <input type="text" name="cover" value="" placeholder="Cover Image URL">
+        <textarea name="plot" rows="8" cols="40" placeholder="Plot Synopsis"></textarea>
+        RATING: <select name="rating">
+          <option value="0" selected>0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option></select>
+        <button class="submitMovie">Create Post</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+<script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
+<script type="text/javascript" src="models.js"></script>
+<script type="text/javascript" src="collections.js"></script>
+<script type="text/javascript" src="views.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "backbone-imdb",
+  "version": "0.0.0",
+  "homepage": "https://github.com/marktkimball/backbone-imdb",
+  "authors": [
+    "Mark Kimball <parkskier@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4"
+  }
+}

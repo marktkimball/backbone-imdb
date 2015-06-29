@@ -1,0 +1,73 @@
+body{
+  background-color: #CACAC6;
+}
+
+.navBar{
+  background: linear-gradient(to bottom,#646464 0,#0e0e0e 100%);
+  display:flex;
+}
+
+.navBar img{
+  max-width: 300px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+
+.entryForm input{
+  height:20px;
+  width: 100px;
+  vertical-align: top;
+  border-radius: 3px;
+  margin: 20px 0px 20px 20px;
+}
+
+.entryForm textarea{
+  border-radius: 3px;
+}
+
+.container{
+  background-color: white;
+  width: 1000px;
+  margin:0 auto;
+}
+
+.entryForm{
+
+}
+
+.singleMovie{
+  display: flex;
+}
+
+.singleMovie img{
+  display:inline-flex;
+}
+
+.regularMovie{
+  flex-grow: 2;
+  padding: 10px 20px 10px 20px;
+}
+
+.regularMovie h1{
+  margin: 0px;
+}
+
+.singleMovie{
+  padding: 25px 50px 50px 50px;
+}
+
+/* h1{
+  display: inline-block;
+  position: absolute;
+  margin: 5px 0px 5px 25px;
+}
+
+p{
+  display:inline-block;
+}
+ */
+.hide{
+  display: none;
+}
