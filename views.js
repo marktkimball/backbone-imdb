@@ -68,7 +68,6 @@ var MovieCollectionView = Backbone.View.extend({
   },
   submitMovie: function(event){
     event.preventDefault();
-
     var newMovie = new MovieModel({
       title: $('input[name="title"]').val(),
       release: $('input[name="release"]').val(),
@@ -79,17 +78,18 @@ var MovieCollectionView = Backbone.View.extend({
 
     newMovie.save();
     this.addOne(newMovie);
+    //this.$el.children('.singleMovie').remove();
+    //this.addAll();
 
     $('input, textarea').val('');
     $('select').val('0');
   },
   selectSort: function(){
-
     var sorter = $('.sortByMenu').val();
-
     this.collection.comparator = sorter;
-
     this.collection.sort();
+    this.$el.children('.singleMovie').remove();
+    this.addAll();
   }
 
 });
