@@ -1,4 +1,8 @@
-$(document).ready(function(){
+var MovieCollection = require('./collections.js');
+var MovieCollectionView = require('./collectionView.js');
+var $ = require('jquery');
+
+module.exports = $(document).ready(function(){
   page.init();
 });
 

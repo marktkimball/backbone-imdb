@@ -1,0 +1,28 @@
+{
+  "name": "backbone-imdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "bundle": "js/node_modules/.bin/browserify js/main.js -o bundled.js -d",
+    "serve": "js/node_modules/.bin/serve",
+    "start": "npm run bundle && npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marktkimball/backbone-imdb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marktkimball/backbone-imdb/issues"
+  },
+  "homepage": "https://github.com/marktkimball/backbone-imdb#readme",
+  "dependencies": {
+    "backbone": "^1.2.1",
+    "browserify": "^10.2.4",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  }
+}

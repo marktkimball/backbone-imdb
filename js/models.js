@@ -1,4 +1,8 @@
-var MovieModel = Backbone.Model.extend({
+var Backbone = require('backbone');
+var $ = require('jquery');
+Backbone.$ = $;
+
+module.exports = Backbone.Model.extend({
   urlRoot: 'http://tiy-fee-rest.herokuapp.com/collections/mark-imdb',
   idAttribute: '_id',
   defaults: function(){
