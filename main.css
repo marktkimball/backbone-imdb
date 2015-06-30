@@ -106,3 +106,52 @@ textarea{
 .hide{
   display: none;
 }
+
+@media (max-width: 1000px){
+  .container{
+    width: 99%;
+  }
+  .entryForm ul{
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+  .plotBox{
+    text-align: center;
+  }
+  .editMovie ul{
+    display:block;
+    width: 100%;
+  }
+  .editMovie input[type=text], .editMovie textarea{
+    width: 80%;
+    display:block;
+  }
+}
+
+@media (max-width: 750px){
+  .navBar{
+    display:block;
+    text-align: center;
+  }
+  input[type=text], textarea{
+    width: 80%;
+  }
+  .singleMovie{
+    display:block;
+  }
+  .regularMovie{
+    width: 100%;
+    padding:0;
+  }
+  .editMovie{
+    width: 100%;
+    padding: 0;
+  }
+  .editMovie ul{
+    padding-left:0;
+  }
+  .editMovie input[type=text], .editMovie textarea{
+    width: 100%;
+  }
+}

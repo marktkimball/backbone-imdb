@@ -34,8 +34,6 @@ module.exports = Backbone.View.extend({
 
     newMovie.save();
     this.addOne(newMovie);
-    //this.$el.children('.singleMovie').remove();
-    //this.addAll();
 
     $('input, textarea').val('');
     $('select').val('0');
