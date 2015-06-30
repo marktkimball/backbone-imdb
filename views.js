@@ -5,7 +5,8 @@ var MovieView = Backbone.View.extend({
   events: {
     'click .delete': 'deleteMovie',
     'click .edit': 'editMovie',
-    'click .submitEdit': 'submitEdit'
+    'click .submitEdit': 'submitEdit',
+    'click .cancelEdit': 'cancelEdit'
   },
   initialize: function (options) {
 
@@ -22,21 +23,28 @@ var MovieView = Backbone.View.extend({
   },
   editMovie: function(event){
     event.preventDefault();
+    this.$el.children('.regularMovie').addClass('hide');
     this.$el.children('.editMovie').removeClass('hide');
   },
   submitEdit: function(event){
     event.preventDefault();
 
+    var $valueGrab = this.$el.children('.editMovie');
     var editMovie = {
-      title: $('input[name="editTitle"]').val(),
-      release: $('input[name="editRelease"]').val(),
-      cover: $('input[name="editCover"]').val(),
-      plot: $('textarea[name="editPlot"]').val(),
-      rating: $('select[name="editRating"]').val()
+      title: $valueGrab.find('.editTitle').val(),
+      release: $valueGrab.find('.editRelease').val(),
+      cover: $valueGrab.find('.editCover').val(),
+      plot: $valueGrab.find('.editPlot').val(),
+      rating: $valueGrab.find('.editRating').val()
     }
     this.$el.children('.editMovie').addClass('hide');
     this.model.save(editMovie);
     this.render();
+  },
+  cancelEdit: function(event){
+    event.preventDefault();
+    this.$el.children('.regularMovie').removeClass('hide');
+    this.$el.children('.editMovie').addClass('hide');
   }
 });
 
@@ -45,7 +53,8 @@ var MovieCollectionView = Backbone.View.extend({
   el: '.container',
   collection: null,
   events: {
-    'click .submitMovie': 'submitMovie'
+    'click .submitMovie': 'submitMovie',
+    'change .sortByMenu': 'selectSort'
   },
   initialize: function (options) {
     this.addAll();
@@ -73,6 +82,14 @@ var MovieCollectionView = Backbone.View.extend({
 
     $('input, textarea').val('');
     $('select').val('0');
+  },
+  selectSort: function(){
+
+    var sorter = $('.sortByMenu').val();
+
+    this.collection.comparator = sorter;
+
+    this.collection.sort();
   }
 
 });

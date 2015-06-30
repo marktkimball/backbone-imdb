@@ -1,10 +1,16 @@
 body{
   background-color: #CACAC6;
+  font-family: 'Oswald', sans-serif;
+}
+p{
+  font-weight: 300;
 }
 
 .navBar{
   background: linear-gradient(to bottom,#646464 0,#0e0e0e 100%);
   display:flex;
+  padding: 20px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .navBar img{
@@ -12,18 +18,41 @@ body{
   max-height: 150px;
   width: auto;
   height: auto;
-  vertical-align: middle;
+  margin: auto;
+  flex-grow: 1;
+  padding-right: 20px;
 }
 
-.entryForm input{
+ul{
+  list-style: none;
+  display: inline-block;
+  width: 40%;
+}
+
+.plotBox{
+  text-align: right;
+}
+
+.entryForm{
+  flex-grow: 2;
+  background-color: white;
+  border: solid 2px #0e0e0e;
+  border-radius: 5px;
+}
+
+h2{
+  text-align: center;
+}
+
+input{
   height:20px;
-  width: 100px;
+  width: 200px;
   vertical-align: top;
   border-radius: 3px;
-  margin: 20px 0px 20px 20px;
+  margin-bottom: 20px;
 }
 
-.entryForm textarea{
+textarea{
   border-radius: 3px;
 }
 
@@ -31,22 +60,33 @@ body{
   background-color: white;
   width: 1000px;
   margin:0 auto;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
 
-.entryForm{
-
+.sortByMenu{
+  float:right;
+  margin:10px;
 }
 
 .singleMovie{
+  clear: right;
   display: flex;
+  border: solid 2px #0e0e0e;
+  border-radius: 5px;
+  margin: 15px 5px 15px 5px;
 }
 
 .singleMovie img{
-  display:inline-flex;
+  margin: auto;
+  height:317px;
+  width:214px;
+  display:inline-block;
 }
 
 .regularMovie{
-  flex-grow: 2;
+  width: 70%;
   padding: 10px 20px 10px 20px;
 }
 
@@ -58,16 +98,11 @@ body{
   padding: 25px 50px 50px 50px;
 }
 
-/* h1{
-  display: inline-block;
-  position: absolute;
-  margin: 5px 0px 5px 25px;
+.editMovie{
+  width: 70%;
+  padding: 10px 20px 10px 20px;
 }
 
-p{
-  display:inline-block;
-}
- */
 .hide{
   display: none;
 }

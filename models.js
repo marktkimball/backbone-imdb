@@ -7,7 +7,7 @@ var MovieModel = Backbone.Model.extend({
       release: 'YYYY',
       cover: 'http://www.imdb.com/images/nopicture/large/film.png',
       plot: 'In a world...one man...his true destiny...',
-      rating: 0
+      rating: '0'
     };
   },
   initialize: function(options){
