@@ -79,9 +79,32 @@ textarea{
   margin-bottom: 20px;
 }
 
-.sortByMenu{
-  float:right;
-  margin:10px;
+.subMenu{
+  width: 100%;
+}
+
+.subMenu ul{
+  border: solid 2px #0e0e0e;
+  border-left: 0px;
+  border-right: 0px;
+  width: 100%;
+  padding:0;
+  text-align: center;
+}
+
+.subMenu li{
+  width: 49%;
+  display: inline-block;
+  padding: 10px 0px 10px 0px;
+}
+
+.subMenu h1{
+  margin: 0;
+}
+
+.subMenu p{
+  float: right;
+  margin: 0px 10px 10px 0px;
 }
 
 .singleMovie{
@@ -92,8 +115,11 @@ textarea{
   margin: 15px 5px 15px 5px;
 }
 
-.singleMovie img{
+.singleMovie a{
   margin: auto;
+}
+
+.singleMovie img{
   height:317px;
   width:214px;
   display:inline-block;

@@ -11,7 +11,7 @@ module.exports = Backbone.View.extend({
   tagName: 'div',
   className: 'entryForm',
   events:{
-    'click .submitMovie': 'submitMovie',
+    'click .submitMovie': 'submitMovie'
   },
   initialize: function (options) {
       this.render();

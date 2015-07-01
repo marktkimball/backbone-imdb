@@ -4,19 +4,6 @@ Backbone.$ = $;
 var Routes = require('./routes.js');
 
 module.exports = $(document).ready(function(){
-  page.init();
+  new Routes();
+  Backbone.history.start();
 });
-
-var page= {
-
-  init: function(){
-    page.initStyling();
-  },
-
-  initStyling: function(arguments){
-    new Routes();
-    Backbone.history.start();
-    }
-
-
-  };
