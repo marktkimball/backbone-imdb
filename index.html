@@ -10,7 +10,7 @@
       <div class='regularMovie'>
         <h1><%= title %></h1>
         <p>(<%= release %>)</p>
-        <p>User rating: <%= rating %> / 10</p>
+        <p>User rating: <%= rating %> / 9</p>
         <p><%= plot %></p>
         <button class="edit">Edit Movie</button>
         <button class="delete">Delete Movie</button>
@@ -31,8 +31,7 @@
             <option value="6">6</option>
             <option value="7">7</option>
             <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option></select></li>
+            <option value="9">9</option></select></li>
         </ul>
         <ul class = 'plotBox'>
           <li><textarea class = 'editPlot' name="editPlot" rows="10" cols="40"><%= plot %></textarea></li>
@@ -61,8 +60,7 @@
             <option value="6">6</option>
             <option value="7">7</option>
             <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option></select></li>
+            <option value="9">9</option></select></li>
         </ul>
         <ul class = 'plotBox'>
           <li><textarea name="plot" rows="10" cols="40" placeholder="Plot Synopsis"></textarea></li>
@@ -74,6 +72,7 @@
       <option value="" disabled selected>Sort By...</option>
       <option value="title">Title</option>
       <option value="release">Release Date</option>
+      <option value="rating">Rating (low to high)</option>
     </select>
   </div>
 
