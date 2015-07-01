@@ -61,10 +61,16 @@ ul{
 
 .entryForm h4{
   text-align: center;
-  transition: 0.5s ease;
+  transition: all 1s ease;
 }
 
-.submitMovie:click ~ .entryForm h4 {
+.startAnimation{
+  opacity: 0;
+  transform: translateY(0px);
+}
+
+.addAnimation{
+  opacity:1;
   transform: translateY(-50px);
 }
 

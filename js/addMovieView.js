@@ -29,9 +29,10 @@ module.exports = Backbone.View.extend({
       plot: $('textarea').val(),
       rating: $('select[name="rating"]').val()
     });
-    $('.entryForm').find('h4').removeClass('hide');
+
+    $('.entryForm').find('h4').fadeIn().removeClass('startAnimation').addClass('addAnimation');
     setTimeout(function(){
-      $('.entryForm').find('h4').addClass('hide');
+      $('.entryForm').find('h4').addClass('startAnimation').removeClass('addAnimation');
       }, 1000);
     newMovie.save();
 
