@@ -6,9 +6,9 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="main.css">
   <script type="text/template" id="singleMovieTmpl">
-      <img src='<%= cover %>'/>
+      <a href='#movie/<%= _id %>'><img src='<%= cover %>'/></a>
       <div class='regularMovie'>
-        <h1><%= title %></h1>
+        <h1><a href='#movie/<%= _id %>'><%= title %></a></h1>
         <p>(<%= release %>)</p>
         <p>User rating: <%= rating %> / 9</p>
         <p><%= plot %></p>
@@ -39,11 +39,7 @@
         </ul>
       </div>
     </script>
-</head>
-<body>
-  <div class='container'>
-    <div class='navBar'>
-      <img src="http://www.mariannehettinger.com/images/300px-IMDb_logo.svg.png"/>
+    <script type="text/template" id="addMovieTmpl">
       <div class="entryForm">
         <h2>Movie Not Found?  Add it!</h2>
         <ul>
@@ -67,6 +63,15 @@
           <li><button class="submitMovie">Create Movie</button></li>
         </ul>
       </div>
+    </script>
+
+</head>
+
+<body>
+  <div class='container'>
+    <div class='navBar'>
+      <a href = "#home"><img src="http://www.mariannehettinger.com/images/300px-IMDb_logo.svg.png"/></a>
+
     </div>
     <select class="sortByMenu" name="sortBy">
       <option value="" disabled selected>Sort By...</option>
@@ -74,6 +79,8 @@
       <option value="release">Release Date</option>
       <option value="rating">Rating (low to high)</option>
     </select>
+    <div class="movieZone">
+    </div>
   </div>
 
 </body>

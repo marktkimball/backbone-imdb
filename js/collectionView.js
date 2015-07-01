@@ -2,14 +2,14 @@ var Backbone = require('backbone');
 var $ = require('jquery');
 Backbone.$ = $;
 var _ = require('underscore');
-var MovieView = require('./movieView');
-var MovieModel = require('./models');
+var MovieView = require('./movieView.js');
+var MovieModel = require('./models.js');
 
 module.exports = Backbone.View.extend({
-  el: '.container',
+  el: '.movieZone',
   collection: null,
   events: {
-    'click .submitMovie': 'submitMovie',
+    //'click .submitMovie': 'submitMovie',
     'change .sortByMenu': 'selectSort'
   },
   initialize: function (options) {
@@ -22,22 +22,22 @@ module.exports = Backbone.View.extend({
     var movieView = new MovieView({model: movie});
     this.$el.append(movieView.render().el);
   },
-  submitMovie: function(event){
-    event.preventDefault();
-    var newMovie = new MovieModel({
-      title: $('input[name="title"]').val(),
-      release: $('input[name="release"]').val(),
-      cover: $('input[name="cover"]').val(),
-      plot: $('textarea').val(),
-      rating: $('select').val()
-    })
+  //submitMovie: function(event){
+    //event.preventDefault();
+    //var newMovie = new MovieModel({
+      //title: $('input[name="title"]').val(),
+      //release: $('input[name="release"]').val(),
+      //cover: $('input[name="cover"]').val(),
+      //plot: $('textarea').val(),
+      //rating: $('select').val()
+    //})
 
-    newMovie.save();
-    this.addOne(newMovie);
+    //newMovie.save();
+    //this.addOne(newMovie);
 
-    $('input, textarea').val('');
-    $('select').val('0');
-  },
+    //$('input, textarea').val('');
+    //$('select').val('0');
+  //},
   selectSort: function(){
     var sorter = $('.sortByMenu').val();
     this.collection.comparator = sorter;
