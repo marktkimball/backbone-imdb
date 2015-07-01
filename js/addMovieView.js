@@ -6,7 +6,7 @@ var MovieModel = require('./models.js');
 var MovieView = require('./movieView.js');
 
 module.exports = Backbone.View.extend({
-  el: '.navBar',
+  el: '.movieZone',
   template: _.template($('#addMovieTmpl').html()),
   tagName: 'div',
   className: 'entryForm',
@@ -27,14 +27,13 @@ module.exports = Backbone.View.extend({
       release: $('input[name="release"]').val(),
       cover: $('input[name="cover"]').val(),
       plot: $('textarea').val(),
-      rating: $('select').val()
+      rating: $('select[name="rating"]').val()
     });
-
-    newMovie.save().done(function(){
-      newMovie.fetch()
-      var movieView = new MovieView({model: newMovie});
-      $('.movieZone').append(movieView.render().el);
-    });
+    $('.entryForm').find('h4').removeClass('hide');
+    setTimeout(function(){
+      $('.entryForm').find('h4').addClass('hide');
+      }, 1000);
+    newMovie.save();
 
     $('input, textarea').val('');
     $('select').val('0');

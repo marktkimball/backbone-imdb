@@ -15,16 +15,17 @@ module.exports = Backbone.Router.extend({
     "home" : "home",
     "movie/:id": "singleMovieView",
     "about" : "aboutPageView",
-    "contact" : "contactPageView"
+    "contact" : "contactPageView",
+    "addMovie" : "addMovieView"
   },
   home: function(){
     $('.entryForm').remove();
+    $('.sortByMenu').remove();
     $('.aboutPage').remove();
     $('.contactPage').remove();
     $('.movieZone').empty();
     $('.sortByMenu').removeClass('hide');
     $('.movieZone').removeClass('hide');
-    var addMovieView = new AddMovieView();
     var addSortMenuView = new AddSortMenuView();
     var myCollection = new MovieCollection();
     myCollection.fetch().done(function(){
@@ -41,6 +42,7 @@ module.exports = Backbone.Router.extend({
   },
   aboutPageView: function(){
     $('.contactPage').remove();
+    $('.entryForm').remove();
     $('.sortByMenu').addClass('hide');
     $('.movieZone').addClass('hide');
     var markup = _.template($('#aboutPage').html())
@@ -48,10 +50,19 @@ module.exports = Backbone.Router.extend({
   },
   contactPageView: function(){
     $('.aboutPage').remove();
+    $('.entryForm').remove();
     $('.sortByMenu').addClass('hide');
     $('.movieZone').addClass('hide');
     var markup = _.template($('#contactPage').html())
     $('.container').append(markup);
+  },
+  addMovieView: function(){
+    $('.aboutPage').remove();
+    $('.contactPage').remove();
+    $('.sortByMenu').addClass('hide');
+    $('.movieZone').removeClass('hide');
+    $('.movieZone').empty();
+    var addMovieView = new AddMovieView();
   }
 
 });
