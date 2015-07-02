@@ -33,8 +33,20 @@ a:hover{
 
 .navBar a{
   margin: auto;
+  flex-grow: 2;
+  padding: 0px 10px 0px 70px;
+}
+
+.navBar p{
+  color: #FFF;
+  font-size: 1.5em;
+  position: relative;
+  bottom: 0;
   flex-grow: 1;
-  padding: 0px 10px 0px 10px;
+  margin: 100px 0px 0px 0px;
+  padding-right: 20px;
+  text-align: right;
+  font-style: italic;
 }
 
 ul{
@@ -215,6 +227,13 @@ textarea{
   .navBar{
     display:block;
     text-align: center;
+  }
+  .navBar a{
+    flex-grow: 1;
+    padding: 0;
+  }
+  .navBar p{
+    display: none;
   }
   input[type=text], textarea{
     width: 80%;
