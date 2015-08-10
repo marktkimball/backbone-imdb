@@ -22,7 +22,6 @@ module.exports = Backbone.View.extend({
   },
   selectSort: function(){
     var sorter = $('.sortByMenu').find('select').val();
-    console.log(sorter);
     var myCollection = new MovieCollection();
     myCollection.fetch().done(function(){
       var collectionView = new MovieCollectionView({collection: myCollection});

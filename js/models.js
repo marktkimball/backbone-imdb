@@ -3,7 +3,7 @@ var $ = require('jquery');
 Backbone.$ = $;
 
 module.exports = Backbone.Model.extend({
-  urlRoot: 'http://tiy-fee-rest.herokuapp.com/collections/mark-imdb',
+  urlRoot: 'http://stormy-ocean-9523.herokuapp.com/collections/imdb',
   idAttribute: '_id',
   defaults: function(){
     return {
@@ -15,6 +15,5 @@ module.exports = Backbone.Model.extend({
     };
   },
   initialize: function(options){
-    console.log("Movie model created with: ", options);
   }
 });

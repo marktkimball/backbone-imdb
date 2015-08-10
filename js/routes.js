@@ -62,6 +62,7 @@ module.exports = Backbone.Router.extend({
     $('.sortByMenu').addClass('hide');
     $('.movieZone').removeClass('hide');
     $('.movieZone').empty();
+    $('.movieZone').unbind();
     var addMovieView = new AddMovieView();
   }
 

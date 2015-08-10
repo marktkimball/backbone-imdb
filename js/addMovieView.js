@@ -14,7 +14,7 @@ module.exports = Backbone.View.extend({
     'click .submitMovie': 'submitMovie'
   },
   initialize: function (options) {
-      this.render();
+    this.render();
   },
   render: function () {
     this.$el.append(this.template);
@@ -30,11 +30,12 @@ module.exports = Backbone.View.extend({
       rating: $('select[name="rating"]').val()
     });
 
+    newMovie.save();
+
     $('.entryForm').find('h4').fadeIn().removeClass('startAnimation').addClass('addAnimation');
     setTimeout(function(){
       $('.entryForm').find('h4').addClass('startAnimation').removeClass('addAnimation');
-      }, 1000);
-    newMovie.save();
+    }, 1000);
 
     $('input, textarea').val('');
     $('select').val('0');
