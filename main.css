@@ -25,9 +25,8 @@ a:hover{
 }
 
 .navBar img{
-  max-width: 300px;
+  max-width: 100%;
   max-height: 150px;
-  width: auto;
   height: auto;
 }
 
@@ -189,7 +188,7 @@ textarea:focus{
 }
 
 .aboutPage{
-  padding: 0px 70px 20px 70px;
+  padding: 0px 10% 20px 10%;
 }
 
 .contactPage{
@@ -202,11 +201,12 @@ textarea:focus{
 
 .contactPage ul{
   width: 100%;
+  padding:0;
 }
 
 .contactPage li{
   display: inline-block;
-  width: 15%;
+  padding: 0 5px;
 }
 
 .hide{
