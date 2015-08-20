@@ -9,7 +9,7 @@ module.exports = Backbone.Model.extend({
     return {
       title: 'Unknown Movie Title',
       release: 'YYYY',
-      cover: 'http://www.imdb.com/images/nopicture/large/film.png',
+      cover: 'https://www.imdb.com/images/nopicture/large/film.png',
       plot: 'In a world...one man...his true destiny...',
       rating: '0'
     };
