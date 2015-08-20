@@ -3,7 +3,7 @@ var $ = require('jquery');
 Backbone.$ = $;
 
 module.exports = Backbone.Model.extend({
-  urlRoot: 'http://stormy-ocean-9523.herokuapp.com/collections/imdb',
+  urlRoot: 'https://stormy-ocean-9523.herokuapp.com/collections/imdb',
   idAttribute: '_id',
   defaults: function(){
     return {
